@@ -9,10 +9,23 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    behaviors {
+        as: as {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AS";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <0>;
+            flavor = "tap-preferred";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Alpha {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -21,10 +34,20 @@
 
             display-name = "Alpha";
             bindings = <
-&none  &kp Q  &kp W  &kp F    &kp P        &kp B      &kp J    &kp L          &kp U      &kp Y    &kp SQT    &none
-&none  &kp A  &kp R  &kp S    &kp T        &kp G      &kp M    &kp N          &kp E      &kp I    &kp O      &none
-&none  &kp Z  &kp X  &kp C    &kp D        &kp V      &kp K    &kp H          &kp COMMA  &kp DOT  &kp QMARK  &none
-                     &kp ESC  &lt 1 SPACE  &kp TAB    &kp RET  &kp BACKSPACE  &kp DEL
+&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F   &as LS(P) P  &as LS(B) B    &as LS(J) J  &as LS(L) L    &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
+&none  &as LS(A) A  &as LS(R) R  &as LS(S) S   &as LS(T) T  &as LS(G) G    &as LS(M) M  &as LS(N) N    &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
+&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C   &as LS(D) D  &as LS(V) V    &as LS(K) K  &as LS(H) H    &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
+                                 &lt 2 ESCAPE  &lt 1 SPACE  &kp TAB        &kp RET      &kp BACKSPACE  &kp DEL
+            >;
+        };
+
+        NumNav {
+            label = "NumNav";
+            bindings = <
+&trans  &trans  &kp N7        &kp N8        &kp N9        &kp N0        &trans  &trans          &kp UP_ARROW    &trans     &trans  &trans
+&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &trans  &trans          &trans          &trans     &trans  &trans
+                              &trans        &trans        &trans        &trans  &trans          &trans
             >;
         };
 
