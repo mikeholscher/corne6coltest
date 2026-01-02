@@ -22,6 +22,38 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        System_Layer {
+            bindings = <&mo 2>;
+            key-positions = <38 39>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+
+        CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <16 19>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+
+        Enter {
+            bindings = <&kp ENTER>;
+            key-positions = <19 20>;
+            layers = <0>;
+            timeout-ms = <50>;
+        };
+
+        EnterNum {
+            bindings = <&kp ENTER>;
+            key-positions = <16 15>;
+            layers = <1>;
+            timeout-ms = <50>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -34,10 +66,10 @@
 
             display-name = "Alpha";
             bindings = <
-&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F   &as LS(P) P  &as LS(B) B    &as LS(J) J  &as LS(L) L    &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
-&none  &as LS(A) A  &as LS(R) R  &as LS(S) S   &as LS(T) T  &as LS(G) G    &as LS(M) M  &as LS(N) N    &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
-&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C   &as LS(D) D  &as LS(V) V    &as LS(K) K  &as LS(H) H    &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
-                                 &lt 2 ESCAPE  &lt 1 SPACE  &kp TAB        &kp RET      &kp BACKSPACE  &kp DEL
+&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F  &as LS(P) P  &as LS(B) B    &as LS(J) J    &as LS(L) L  &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
+&none  &as LS(A) A  &as LS(R) R  &as LS(S) S  &as LS(T) T  &as LS(G) G    &as LS(M) M    &as LS(N) N  &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
+&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(D) D  &as LS(V) V    &as LS(K) K    &as LS(H) H  &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
+                                 &none        &none        &lt 1 SPACE    &kp BACKSPACE  &none        &none
             >;
         };
 
