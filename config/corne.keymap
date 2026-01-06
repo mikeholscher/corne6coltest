@@ -46,16 +46,9 @@
             timeout-ms = <50>;
         };
 
-        Backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <7 8>;
-            timeout-ms = <50>;
-            layers = <0>;
-        };
-
-        Ctrl-Backspace {
-            bindings = <&kp LC(BACKSPACE)>;
-            key-positions = <7 6>;
+        Delete {
+            bindings = <&kp DELETE>;
+            key-positions = <15 16>;
             timeout-ms = <50>;
             layers = <0>;
         };
@@ -68,7 +61,7 @@
         };
 
         Paste {
-            bindings = <&kp LC(BACKSPACE)>;
+            bindings = <&kp LC(V)>;
             key-positions = <4 5>;
             timeout-ms = <50>;
             layers = <0>;
@@ -108,10 +101,10 @@
 
             display-name = "Alpha";
             bindings = <
-&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F  &as LS(P) P  &as LS(B) B    &as LS(J) J  &as LS(L) L  &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
-&none  &as LS(A) A  &as LS(R) R  &as LS(S) S  &as LS(T) T  &as LS(G) G    &as LS(M) M  &as LS(N) N  &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
-&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(D) D  &as LS(V) V    &as LS(K) K  &as LS(H) H  &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
-                                 &none        &none        &lt 1 SPACE    &lt 2 DEL    &none        &none
+&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F  &as LS(P) P  &as LS(B) B    &as LS(J) J      &as LS(L) L  &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
+&none  &as LS(A) A  &as LS(R) R  &as LS(S) S  &as LS(T) T  &as LS(G) G    &as LS(M) M      &as LS(N) N  &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
+&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(D) D  &as LS(V) V    &as LS(K) K      &as LS(H) H  &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
+                                 &none        &none        &lt 1 SPACE    &lt 2 BACKSPACE  &none        &none
             >;
         };
 
@@ -127,10 +120,10 @@
 
         SymSys {
             bindings = <
-&none  &kp CARET     &kp PIPE        &kp BACKSLASH  &kp SLASH  &kp EQUAL    &kp GRAVE    &kp LBKT  &kp RBKT  &none  &bt BT_NXT      &none
-&none  &kp ASTERISK  &kp HASH        &kp AMPERSAND  &kp AT     &kp PLUS     &kp PERCENT  &kp LPAR  &kp RPAR  &none  &bt BT_PRV      &none
-&none  &kp TILDE     &kp UNDERSCORE  &kp LT         &kp GT     &kp MINUS    &kp DOLLAR   &kp LBRC  &kp RBRC  &none  &bt BT_CLR_ALL  &none
-                                     &none          &none      &trans       &trans       &none     &none
+&none  &kp CARET     &kp PIPE        &kp BACKSLASH  &kp SLASH  &kp EQUAL            &kp GRAVE    &kp LBKT  &kp RBKT  &none  &bt BT_NXT      &none
+&none  &kp ASTERISK  &kp HASH        &kp AMPERSAND  &kp AT     &kp PLUS             &kp PERCENT  &kp LPAR  &kp RPAR  &none  &bt BT_PRV      &none
+&none  &kp TILDE     &kp UNDERSCORE  &kp LT         &kp GT     &kp MINUS            &kp DOLLAR   &kp LBRC  &kp RBRC  &none  &bt BT_CLR_ALL  &none
+                                     &none          &none      &kp LC(BACKSPACE)    &trans       &none     &none
             >;
 
             label = "SymSys";
