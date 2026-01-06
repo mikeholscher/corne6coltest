@@ -62,28 +62,35 @@
 
         Paste {
             bindings = <&kp LC(V)>;
-            key-positions = <4 5>;
+            key-positions = <28 29>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
-            key-positions = <4 3>;
+            key-positions = <27 28>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
-            key-positions = <3 2>;
+            key-positions = <26 27>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
         Undo {
             bindings = <&kp LC(X)>;
-            key-positions = <2 1>;
+            key-positions = <25 26>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        Escape {
+            bindings = <&kp LC(ESCAPE)>;
+            key-positions = <1 2>;
             timeout-ms = <50>;
             layers = <0>;
         };
