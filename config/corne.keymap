@@ -25,13 +25,6 @@
     combos {
         compatible = "zmk,combos";
 
-        System_Layer {
-            bindings = <&mo 2>;
-            key-positions = <38 39>;
-            layers = <0>;
-            timeout-ms = <50>;
-        };
-
         CapsWord {
             bindings = <&caps_word>;
             key-positions = <16 19>;
@@ -52,6 +45,55 @@
             layers = <1>;
             timeout-ms = <50>;
         };
+
+        Backspace {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <7 8>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        Ctrl-Backspace {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <7 6>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        BackspaceNum {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <4 3>;
+            timeout-ms = <50>;
+            layers = <1>;
+        };
+
+        Paste {
+            bindings = <&kp LC(BACKSPACE)>;
+            key-positions = <4 5>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        Copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <4 3>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        Cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <3 2>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        Undo {
+            bindings = <&kp LC(X)>;
+            key-positions = <2 1>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
     };
 
     keymap {
@@ -66,32 +108,32 @@
 
             display-name = "Alpha";
             bindings = <
-&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F  &as LS(P) P  &as LS(B) B    &as LS(J) J    &as LS(L) L  &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
-&none  &as LS(A) A  &as LS(R) R  &as LS(S) S  &as LS(T) T  &as LS(G) G    &as LS(M) M    &as LS(N) N  &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
-&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(D) D  &as LS(V) V    &as LS(K) K    &as LS(H) H  &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
-                                 &none        &none        &lt 1 SPACE    &kp BACKSPACE  &none        &none
+&none  &as LS(Q) Q  &as LS(W) W  &as LS(F) F  &as LS(P) P  &as LS(B) B    &as LS(J) J  &as LS(L) L  &as LS(U) U          &as LS(Y) Y       &as LS(SQT) APOS          &none
+&none  &as LS(A) A  &as LS(R) R  &as LS(S) S  &as LS(T) T  &as LS(G) G    &as LS(M) M  &as LS(N) N  &as LS(E) E          &as LS(I) I       &as LS(O) O               &none
+&none  &as LS(Z) Z  &as LS(X) X  &as LS(C) C  &as LS(D) D  &as LS(V) V    &as LS(K) K  &as LS(H) H  &as SEMICOLON COMMA  &as COLON PERIOD  &as EXCLAMATION QUESTION  &none
+                                 &none        &none        &lt 1 SPACE    &lt 2 DEL    &none        &none
             >;
         };
 
         NumNav {
             label = "NumNav";
             bindings = <
-&trans  &trans  &kp N7        &kp N8        &kp N9        &kp N0        &trans  &trans          &kp UP_ARROW    &trans     &trans  &trans
-&trans  &trans  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PERIOD    &trans  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &trans  &trans          &trans          &trans     &trans  &trans
-                              &trans        &trans        &trans        &trans  &trans          &trans
+&none  &trans        &kp N7           &kp N8        &kp N9        &kp N0        &kp LS(LG(NUMBER_4))  &trans          &kp UP_ARROW    &trans     &trans  &none
+&none  &kp LEFT_GUI  &mt LEFT_ALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp PERIOD    &kp LS(LG(N5))        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
+&none  &trans        &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &trans                &trans          &trans          &trans     &trans  &none
+                                      &none         &none         &trans        &kp TAB               &none           &none
             >;
         };
 
-        System {
+        SymSys {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans          &trans        &trans        &trans        &trans        &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &bt BT_CLR_ALL  &bt BT_CLR    &trans        &trans        &trans        &trans
-                        &trans  &trans  &trans    &trans          &trans        &trans
+&none  &kp CARET     &kp PIPE        &kp BACKSLASH  &kp SLASH  &kp EQUAL    &kp GRAVE    &kp LBKT  &kp RBKT  &none  &bt BT_NXT      &none
+&none  &kp ASTERISK  &kp HASH        &kp AMPERSAND  &kp AT     &kp PLUS     &kp PERCENT  &kp LPAR  &kp RPAR  &none  &bt BT_PRV      &none
+&none  &kp TILDE     &kp UNDERSCORE  &kp LT         &kp GT     &kp MINUS    &kp DOLLAR   &kp LBRC  &kp RBRC  &none  &bt BT_CLR_ALL  &none
+                                     &none          &none      &trans       &trans       &none     &none
             >;
 
-            label = "System";
+            label = "SymSys";
         };
     };
 };
