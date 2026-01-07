@@ -55,7 +55,7 @@
             bindings = <&kp DELETE>;
             key-positions = <4 3>;
             timeout-ms = <20>;
-            layers = <0 1>;
+            layers = <0>;
         };
 
         Paste {
@@ -95,7 +95,7 @@
 
         NumBackspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <3 2>;
+            key-positions = <3 4>;
             timeout-ms = <20>;
             layers = <1>;
         };
