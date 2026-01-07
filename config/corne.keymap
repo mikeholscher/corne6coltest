@@ -31,69 +31,66 @@
             bindings = <&caps_word>;
             key-positions = <16 19>;
             layers = <0>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
         };
 
         Enter {
             bindings = <&kp ENTER>;
-            key-positions = <19 20>;
-            layers = <0>;
-            timeout-ms = <50>;
+            key-positions = <16 15>;
+            timeout-ms = <20>;
         };
 
-        EnterNum {
+        Tab {
             bindings = <&kp ENTER>;
-            key-positions = <16 15>;
-            layers = <1>;
-            timeout-ms = <50>;
+            key-positions = <16 17>;
+            timeout-ms = <20>;
         };
 
         Delete {
             bindings = <&kp DELETE>;
-            key-positions = <15 16>;
-            timeout-ms = <50>;
-            layers = <0>;
+            key-positions = <4 3>;
+            timeout-ms = <20>;
         };
 
         BackspaceNum {
             bindings = <&kp BACKSPACE>;
-            key-positions = <4 3>;
-            timeout-ms = <50>;
+            key-positions = <14 15>;
+            timeout-ms = <20>;
             layers = <1>;
         };
 
         Paste {
             bindings = <&kp LC(V)>;
             key-positions = <28 29>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
         };
 
         Copy {
             bindings = <&kp LC(C)>;
             key-positions = <27 28>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
         };
 
         Cut {
             bindings = <&kp LC(X)>;
             key-positions = <26 27>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
         };
 
         Undo {
-            bindings = <&kp LC(X)>;
+            bindings = <&kp LC(Z)>;
             key-positions = <25 26>;
-            timeout-ms = <50>;
+            timeout-ms = <20>;
             layers = <0>;
         };
 
         Escape {
             bindings = <&kp ESCAPE>;
-            key-positions = <1 2>;
-            timeout-ms = <50>;
+            key-positions = <4 5>;
+            timeout-ms = <20>;
             layers = <0>;
         };
     };
@@ -123,7 +120,7 @@
 &none  &trans        &kp N7           &kp N8        &kp N9        &kp N0        &kp LS(LG(NUMBER_4))  &trans          &kp UP_ARROW    &trans     &trans  &none
 &none  &kp LEFT_GUI  &mt LEFT_ALT N4  &mt LCTRL N5  &mt LSHFT N6  &kp PERIOD    &kp LS(LG(N5))        &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &trans  &none
 &none  &trans        &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp MINUS     &trans                &trans          &trans          &trans     &trans  &none
-                                      &none         &none         &trans        &kp TAB               &none           &none
+                                      &none         &none         &trans        &kp BACKSPACE         &none           &none
             >;
         };
 
