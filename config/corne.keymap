@@ -95,7 +95,7 @@
 
         NumBackspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <4 3>;
+            key-positions = <3 2>;
             timeout-ms = <20>;
             layers = <1>;
         };
@@ -132,10 +132,10 @@
 
         SymSys {
             bindings = <
-&none  &kp CARET     &kp PIPE        &kp BACKSLASH  &kp SLASH  &kp EQUAL    &kp GRAVE    &kp LBKT  &kp RBKT  &none  &bt BT_NXT      &none
-&none  &kp ASTERISK  &kp HASH        &kp AMPERSAND  &kp AT     &kp PLUS     &kp PERCENT  &kp LPAR  &kp RPAR  &none  &bt BT_PRV      &none
-&none  &kp TILDE     &kp UNDERSCORE  &kp LT         &kp GT     &kp MINUS    &kp DOLLAR   &kp LBRC  &kp RBRC  &none  &bt BT_CLR_ALL  &none
-                                     &none          &none      &kp SPACE    &trans       &none     &none
+&none  &kp CARET     &kp PIPE        &kp BACKSLASH  &kp SLASH  &kp EQUAL            &kp GRAVE    &kp LBKT  &kp RBKT  &none  &bt BT_NXT      &none
+&none  &kp ASTERISK  &kp HASH        &kp AMPERSAND  &kp AT     &kp PLUS             &kp PERCENT  &kp LPAR  &kp RPAR  &none  &bt BT_PRV      &none
+&none  &kp TILDE     &kp UNDERSCORE  &kp LT         &kp GT     &kp MINUS            &kp DOLLAR   &kp LBRC  &kp RBRC  &none  &bt BT_CLR_ALL  &none
+                                     &none          &none      &kp LC(BACKSPACE)    &trans       &none     &none
             >;
 
             label = "SymSys";
